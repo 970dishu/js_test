@@ -1,9 +1,9 @@
-let data = "<ul>";
-var ar = [10, 20, 30, 40, "cu"];
-for (var i = 0; i < ar.length; i++) {
-    data += "<li>" + ar[i] + "</li>";
+// let data = "<ul>";
+// var ar = [10, 20, 30, 40, "cu"];
+// for (var i = 0; i < ar.length; i++) {
+//     data += "<li>" + ar[i] + "</li>";
 
-}
+// }
 // ar.push => insert at end
 // ar.pop => remove form end
 // ar.unshift => remove from start
@@ -39,8 +39,10 @@ for (var i = 0; i < ar.length; i++) {
 // task_9 remove the duplicates form an array
 // task_10 print the elements according to the columns given by the user (with space)
  
-a = ar.push("me");
-data += "<li>" + ar[5] + "</li>";
-data += "</ul>";
-console.log(data);
-document.getElementById("hrll").innerHTML = data;
+// a = ar.push("me");
+// data += "<li>" + ar[5] + "</li>";
+// data += "</ul>";
+// console.log(data);
+// document.getElementById("hrll").innerHTML = data;
+
+
