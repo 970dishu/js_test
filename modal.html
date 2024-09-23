@@ -6,6 +6,28 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
     <style>
+        body {
+        
+            background: linear-gradient(300deg, #48ff00, #001aff, #ee0000);
+            background-size: 180% 180%;
+            animation: gradient-animation 4s ease infinite;
+            ;
+        }
+
+        @keyframes gradient-animation {
+            0% {
+                background-position: 0% 50%;
+            }
+
+            50% {
+                background-position: 100% 100%;
+            }
+
+            100% {
+                background-position: 0% 50%;
+            }
+        }
+
         /*THE MODAL (BACKGROUND)*/
         .modal {
             display: none;
@@ -40,7 +62,7 @@
 
         /*the close button*/
         .close {
-            color: white;
+            color: black;
             float: right;
             font-size: 20px;
             font-weight: bold;
@@ -73,9 +95,7 @@
     </div>
 
     <p id="data" style="height: 90vh;
-        background: linear-gradient(180deg, #ffffff, #000000, #000000);
-        background-size: 180% 180%;
-        animation: gradient-animation 18s ease infinite;
+        
       ">
         Regular
     </p>
