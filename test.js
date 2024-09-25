@@ -46,3 +46,21 @@
 // document.getElementById("hrll").innerHTML = data;
 
 
+//Anom
+
+// function abc(n){
+//     console.log(n*2);
+// }
+
+let abc = function(x){
+    console.log(x*2);
+};
+
+function hello(name){
+    console.log(name);
+    name(9);
+    console.log(typeof(name));
+}  
+
+let m = "university";
+hello(abc);
