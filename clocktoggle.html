@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <div id="clock"></div>
+    <div class="btn">
+        <button id="togglebtn"></button>
+    </div>
+    <script>
+        function showclock(){
+            const now = new Date();
+            const hrs = now.getHours();
+            const min = now.getMinutes();
+            const sec = now.getSeconds();
+            document.getElementById("clock").innerHTML = `${hrs}:${min}:${sec}`;
+        }
+        var Valid;
+        function toggleClock(){
+            if(Valid!= null){
+                clearInterval(Valid);
+                Valid = null;
+                document.getElementById('togglebtn').innerHTML = "START CLOCK";
+            }
+            else{
+                document.getElementById("togglebtn").innerHTML = "STOP CLOCK";
+                Valid = setInterval(showclock,1000);
+            }
+        }
+        document.getElementById("togglebtn").addEventListener('click',toggleClock);
+        toggleClock();
+    </script>
+</body>
+</html>

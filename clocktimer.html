@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <button id="btn" onclick="startcount(15);">Start Count Down
+    </button>
+    <button id="btn" onclick="clearInterval(myClock);">Clock
+    </button>
+
+    <p id="root"></p>
+    <p id="clock"></p>
+
+    <script>
+        var myClock = setInterval(showclock, 100);
+        function showclock() {
+            var abc = new Date();
+            daytime = abc.toLocaleTimeString();
+            document.getElementById("clock").innerHTML = daytime;
+        }
+        function startcount(s) {
+            const countdown = setInterval(function () {
+                s--;
+                if (s < 0) {
+                    clearInterval(countdown);
+
+                }
+                else {
+                    document.getElementById("root").innerText = s;
+                }
+            }, 1000);
+        }
+    </script>
+</body>
+
+</html>
