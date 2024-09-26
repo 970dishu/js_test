@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .btn {
+            border: none;
+            outline: none;
+            padding: 10px 16px;
+            background-color: lightcoral;
+            cursor: pointer;
+            font-size: 18px;
+        }
+
+        .active, .btn:hover {
+            background-color: blue;
+            color: white;
+        }
+    </style>
+</head>
+
+<body>
+    <div id="mydiv">
+        <button class="btn">1</button>
+        <button class="btn active">2</button>
+        <button class="btn">3</button>
+        <button class="btn">4</button>
+        <button class="btn">5</button>
+    </div>
+    <script>
+        var header = document.getElementById("mydiv");
+        var btns = header.getElementsByClassName("btn");
+        for (var i = 0; i < btns.length; i++) {
+            btns[i].addEventListener("mouseover", function() {
+            var current = document.getElementsByClassName("active");
+            console.log(current);
+            current[0].className = current[0].className.replace(" active", "");
+            this.className += " active";
+            });
+        }
+    </script>
+</body>
+
+</html>
