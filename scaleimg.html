@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        div{
+            border: 2px solid red;
+            overflow: hidden;
+            display: inline-flex;
+        }
+    </style>
+</head>
+<body>
+    <div>
+        <img src="street.jpg" alt="" id="img1" height="50%" width="50%">
+    </div>
+    <button onclick="zoomin()">zoomin</button>
+    <button onclick="zoomout()">zoomout</button>
+
+    <script>
+        let scale = 1;
+        function zoomin(){
+            if(scale>5){
+                alert("You are fully zoomed in!")
+            }
+            else{
+                document.getElementById("img1").style.scale = scale+1;
+                document.getElementById("img1").style.transition = "0.5s";
+                scale++;
+            }
+        }
+        
+        function zoomout(){
+            if(scale<=1){
+                alert("You are fully zoomed out!")
+            }
+            else{
+                document.getElementById("img1").style.scale = scale-1;
+                document.getElementById("img1").style.transition = "0.5s";
+                scale--;
+            }
+        }
+    </script>
+</body>
+
+</html>
